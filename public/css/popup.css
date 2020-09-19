@@ -1,0 +1,45 @@
+/* css for popup box */
+.popup .overlay {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.4);
+	z-index: 1;
+	display: none;
+}
+.popup .content {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	color: black;
+	transform: translate(-50%, -50%) scale(0);
+	background: #fff;
+	z-index: 2;
+	text-align: center;
+	padding: 1.6em;
+	box-sizing: border-box;
+	font-size: 1.1em;
+	border-radius: 0.8em;
+}
+
+.popup.active .overlay {
+	display: block;
+}
+.popup.active .content {
+	transition: all 350ms ease-in-out;
+	transform: translate(-50%, -50%) scale(1);
+}
+.popup button {
+	margin-top: 20px;
+	border-radius: 4em;
+	cursor: pointer;
+	color: white;
+	background-color: black;
+	height: 5em;
+	padding:0;
+	width: 30%;
+	margin:0.2em;
+	outline: none;
+}
